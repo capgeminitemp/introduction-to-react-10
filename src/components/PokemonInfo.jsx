@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import { useSelector } from 'react-redux';
-
+import React from "react";
+import useStore from "../store";
 
 const PokemonInfo = () => {
-    const selectedPokemon = useSelector(state => state.selectedPokemon);
+  const selectedPokemon = useStore((state) => state.selectedPokemon);
 
-    return selectedPokemon ? (
+  return selectedPokemon ? (
     <div>
       <h2>{selectedPokemon.name.english}</h2>
       <table>
